@@ -19017,6 +19017,25 @@ video {
           animation: bounce 1s infinite;
 }
 
+header {
+  position: relative;
+}
+
+header::after {
+  content: "";
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #000;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0));
+  --tw-gradient-to: #000;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 0;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -110976,5 +110995,3 @@ video {
             animation: bounce 1s infinite;
   }
 }
-
-
